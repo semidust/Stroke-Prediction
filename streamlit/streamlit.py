@@ -1,9 +1,14 @@
 import streamlit as st
 import numpy as np
 import joblib
+import requests
+from io import BytesIO
 
 # load model
-loaded_model = joblib.load(open('./trained_model.sav', 'rb'))
+model_url = 'https://raw.githubusercontent.com/semidust/Stroke-Prediction/main/trained_model.sav'
+response = requests.get(model_url)
+
+loaded_model = joblib.load(BytesIO(response.content), 'rb')
 
 def model_predict(input_data):
   input_data_array = np.array(input_data)
