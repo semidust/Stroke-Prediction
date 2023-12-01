@@ -1,4 +1,4 @@
-# Stroke-Prediction
+# Stroke Prediction
 This project aims to predict whether someone will have a stroke or not based on certain factors.
 
 Dataset Source: [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset/data)
